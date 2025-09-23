@@ -6,6 +6,7 @@
   --Primary-color-black-green: #143c3c;
   --Primary-color-black: #152427;
   --Scondery-color-light-green: #e2eddf;
+  --Scondery-color-gray: #6a8383;
 }
 
 html {
@@ -875,4 +876,215 @@ button {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.71; /* 171.429% */
+}
+
+/* Blog  */
+.blog {
+  padding: 84px 0 0;
+  margin-bottom: 84px;
+}
+
+.blog__header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.blog-heading {
+  width: 45.6%;
+}
+
+.blog-heading::after {
+  right: -23px;
+}
+
+.blog-desc {
+  width: 35.88%;
+  font-size: 1.6rem;
+}
+.blog__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-item {
+  width: 31.58%;
+  border-radius: 40px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 13px;
+}
+
+.blog-item:hover {
+  border-radius: 0 0 20px 20px;
+  background: var(--text-color-white, #fff);
+  box-shadow: 0 12px 74px 0 rgba(91, 91, 91, 0.25);
+}
+
+.blog__item-content {
+  /* padding: 0 30px; đặt sẵn padding để không bị giật */
+  transition: all 0.3s ease;
+}
+.blog-item:hover .blog__item-content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.blog__item-img {
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  height: 317px;
+  object-fit: cover;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 26px;
+}
+
+.blog__item--story {
+  display: block;
+  width: 29.72%;
+  padding: 7px 33px;
+  height: 26px;
+  border-radius: 20px;
+  background: var(--Scondery-color-light-green, #e2eddf);
+  color: #000;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2; /* 120% */
+  margin-top: 26px;
+  margin-bottom: 13px;
+}
+
+.blog__item-desc {
+  color: var(--Primary-color-black-green, #143c3c);
+  height: 90px;
+
+  /* Paragraph/h3 18px bold */
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67; /* 166.667% */
+  padding-bottom: 38px;
+  border-bottom: 1px solid #c4c4c4;
+  margin-bottom: 16px;
+}
+
+.blog__item-date {
+  display: block;
+  color: var(--text-color-black-gray, #575d5e);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2; /* 120% */
+  text-align: end;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 102px;
+  padding: 72px 0 50px;
+  background: var(--Primary-color-black-green, #143c3c);
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 45px;
+}
+.footer__social {
+  width: 36%;
+}
+
+.footer-heading {
+  color: var(--text-color-white, #fff);
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.footer-heading::after {
+  display: none;
+}
+
+.footer__email {
+  width: 86.13%;
+  display: flex;
+  gap: 80px;
+  align-items: end;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--Scondery-color-gray);
+}
+
+.footer__email--box {
+  width: 80%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--Scondery-color-gray, #6a8383);
+  /* Heading/h1 22px semibold */
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.footer__email--btn {
+  background: transparent; /* hoặc màu bạn muốn */
+  border: none; /* bỏ viền mặc định */
+  outline: none; /* bỏ outline khi click */
+  cursor: pointer; /* thêm tay chỉ khi hover */
+}
+
+.footer__social--link {
+  margin-top: 47px;
+}
+
+.footer__social--icon {
+  background: var(--Primary-color-black-green, #143c3c);
+  border: 1px solid #265252;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 22px;
+}
+
+.footer__social--icon:hover {
+  background: #a75325;
+}
+
+.footer__column {
+  display: flex;
+  gap: 50px;
+}
+
+.footer__column--list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.footer__column--heading {
+  color: var(--text-color-white, #fff);
+
+  /* Paragraph/h2 18px medium */
+  font-family: "Public Sans";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.56; /* 155.556% */
+}
+
+.footer__column--desc {
+  color: var(--text-color-white, #fff);
+
+  /* Paragraph/h2 18px medium */
+  font-family: "Public Sans";
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.56; /* 155.556% */
+  margin-bottom: 10px;
+}
+
+.footer__border--bottom {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #143c3c 2.28%, #295a5a 55.65%, rgba(38, 82, 82, 0) 102.06%);
 }

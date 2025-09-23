@@ -1,4 +1,4 @@
-const sections = document.querySelectorAll("main > section[id]");
+const sections = document.querySelectorAll("section[id], footer[id]");
 const navLinks = document.querySelectorAll(".header__nav-link");
 
 const observer = new IntersectionObserver(
@@ -20,7 +20,7 @@ const observer = new IntersectionObserver(
   },
   {
     threshold: 0.3,
-    rootMargin: "-80px 0px -60% 0px", // trừ header + bắt sớm
+    rootMargin: "-80px 0px 0px 0px", // trừ header + bắt sớm
   }
 );
 
