@@ -752,7 +752,7 @@ button {
 }
 
 .video-heading::after {
-  background-color: #e7f9f9;
+  background: var(--Scondery-color-blue, #83a17d);
   right: 110px;
 }
 
