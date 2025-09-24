@@ -931,6 +931,11 @@ button {
   padding-left: 30px;
   padding-right: 30px;
 }
+
+.blog-item:hover .blog__item--story {
+  color: var(--Scondery-color-light-green, #e2eddf);
+  background-color: var(--Primary-color-black-green);
+}
 .blog__item-img {
   width: 100%;
   border-radius: 40px 40px 0 0;
@@ -942,7 +947,9 @@ button {
 }
 
 .blog__item--story {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 29.72%;
   padding: 7px 33px;
   height: 26px;
