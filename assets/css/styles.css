@@ -160,6 +160,7 @@ button {
 .hero {
   margin-top: 60px;
   padding-bottom: 145px;
+  background-color: #fff;
 }
 
 .hero__body {
@@ -554,7 +555,7 @@ button {
   width: 11px; /* lõi xanh đậm */
   height: 11px;
   background: #143c3c;
-  border: 3px solid #eaeaea;
+  border: 3.5px solid #eaeaea;
   border-radius: 50%;
 }
 
@@ -656,13 +657,27 @@ button {
   position: relative;
   padding-left: 20px;
   padding-right: 41px;
-  height: 175px;
+  height: 185px;
   border-radius: 33px;
   /* background: var(--Scondery-color-light-green, #e2eddf); */
   display: grid;
   grid-template-columns: 1fr 2fr 4fr;
+  /* grid-template-rows: 175px 3px; */
   align-items: center;
   justify-content: space-between;
+  margin-top: -3px;
+}
+
+.process__item_border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: calc(100% - 9px);
+  height: 3px;
+  margin-right: 9px;
+  background: linear-gradient(180deg, #83a17d 4.17%, rgba(131, 161, 125, 0) 36.46%);
 }
 
 .process__item--img {
@@ -690,6 +705,10 @@ button {
 .process__item:hover .process__item--img {
   display: block;
 }
+
+.process__item:hover .process__item_border {
+  display: none;
+}
 .process__item--number {
   color: var(--Primary-color-black-green, #143c3c);
 
@@ -716,6 +735,7 @@ button {
   text-decoration: underline;
   position: absolute;
   display: none;
+  margin-top: 15px;
 }
 
 .process__item--desc {
@@ -730,10 +750,11 @@ button {
 
 /* video  */
 .video {
+  position: relative;
   padding: 116px 0 63px;
   margin-top: 69px;
   background: var(--Primary-color-black-green, #143c3c);
-  position: relative;
+
   z-index: 0;
 }
 
@@ -785,26 +806,35 @@ button {
 
 /* video media */
 .video__wrapper {
+  position: relative;
   width: 100%;
-
   margin: 0 auto;
   border-radius: 22px;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 70vh;
+  z-index: 10;
+}
+.video__wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 20; /* video nằm dưới decor */
+  border-radius: 22px;
 }
 
 .video__decor {
   position: absolute;
-  right: 135px;
-  top: 220px;
+  right: -50px;
+  top: -70px;
   z-index: 100;
 }
 
 .video__decor--wire {
   position: absolute;
-  top: 124px;
-  right: 126px;
-  z-index: 25;
+  top: -163px;
+  right: -55px;
+  z-index: 125;
 }
 
 /* Feature */
@@ -846,7 +876,7 @@ button {
   align-items: center;
   width: 30%;
   height: 362px;
-  border-radius: 50%;
+  border-radius: 45%;
   border: 1.5px solid #cecece;
   transition: 0.25s;
 }
@@ -1060,6 +1090,7 @@ button {
 
 .footer__social--icon:hover {
   background: #a75325;
+  border: none;
 }
 
 .footer__column {
