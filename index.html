@@ -12,8 +12,28 @@
       rel="stylesheet"
     />
     <!-- favicon -->
-    <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="./assets/icon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/favicon/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- CSS  -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -22,18 +42,38 @@
     <header class="header">
       <div class="container">
         <div class="header-fixed">
+          <!-- Logo -->
           <a href="#" class="header__logo logo">
             <img src="./assets/logo/logo.svg" alt="Lucy" class="logo__img" />
             <img src="./assets/logo/Lucy.svg" alt="Lucy" class="logo__img" />
           </a>
+
+          <!-- Navbar -->
           <nav class="header__nav">
-            <a href="#home" class="header__nav-link active">Home</a>
-            <a href="#about" class="header__nav-link">About</a>
-            <a href="#services" class="header__nav-link">Services & Rates</a>
-            <a href="#reviews" class="header__nav-link">Reviews</a>
-            <a href="#footer" class="header__nav-link">Contact us</a>
+            <ul class="navbar__list">
+              <li class="navvar__item">
+                <a href="#home" class="header__nav-link active">Home</a>
+              </li>
+              <li class="navvar__item">
+                <a href="#about" class="header__nav-link">About</a>
+              </li>
+              <li class="navvar__item">
+                <a href="#services" class="header__nav-link">Services & Rates</a>
+              </li>
+              <li class="navvar__item">
+                <a href="#reviews" class="header__nav-link">Reviews</a>
+              </li>
+              <li class="navvar__item">
+                <a href="#footer" class="header__nav-link">Contact us</a>
+              </li>
+            </ul>
           </nav>
-          <a href="#!" class="btn header__btn">Sign Up</a>
+
+          <!-- header action -->
+          <div class="header__action">
+            <a href="#!" class="btn header-action_link">Sign In</a>
+            <a href="#!" class="btn header-action_link">Sign Up</a>
+          </div>
         </div>
       </div>
     </header>
@@ -41,35 +81,49 @@
       <!-- Hero -->
       <section class="hero" id="home">
         <div class="container">
-          <div class="hero__body">
+          <div class="hero__inner">
+            <!-- Hero Media -->
             <div class="hero__media">
-              <img src="./assets/img/hero_01.jpg" alt="Lucy-pet" class="hero__media--img" />
-              <img
-                src="./assets/img/hero_union02.svg"
-                alt="Lucy-pet"
-                class="hero__media--union-left"
-              />
-              <img
-                src="./assets/img/hero_union.svg"
-                alt="Lucy-pet"
-                class="hero__media--union-right"
-              />
-              <img src="./assets/img/hero_02.jpg" alt="Lucy-pet" class="hero__media--img-under" />
-              <div class="hero__media--card">
-                <div class="hero__card--health">
-                  <img src="./assets/img/hero_03.jpg" alt="Lucy-pet" class="hero__card-img" />
-                  <div class="hero__card--detail">
-                    <h4 class="section-heading hero__card-heading">Pet Health</h4>
-                    <div class="hero__card--line"></div>
-                    <div class="hero__card--line"></div>
+              <div class="hero__img-wrap">
+                <img src="./assets/img/hero01.png" alt="" class="hero__img" />
+
+                <!-- Decorators -->
+                <img src="./assets/img/decor-01.svg" alt="" class="hero__decor hero__decor-left" />
+                <img src="./assets/img/decor-02.svg" alt="" class="hero__decor hero__decor-right" />
+              </div>
+
+              <div class="hero__img-wrap hero__img-wrap-small">
+                <img src="./assets/img/hero02.png" alt="" class="hero__img" />
+              </div>
+
+              <div class="hero__list">
+                <!-- hero list item 1 -->
+                <div class="hero__list-item">
+                  <img
+                    src="./assets/img/hero03.png"
+                    alt="Lucy-pet"
+                    class="hero__list-item-thumb hero__list-item-upper"
+                  />
+                  <div class="hero__list-item--info">
+                    <p class="hero__list-item--title">Pet Health</p>
+                    <div class="hero__list-item--skeleton" style="--percent: 100%"></div>
+                    <div class="hero__list-item--skeleton" style="--percent: 33%"></div>
                   </div>
                 </div>
-                <div class="hero__card--care">
-                  <img src="./assets/img/hero_04.jpg" alt="Lucy-pet" class="hero__card-img" />
-                  <div class="hero__card--detail">
-                    <h4 class="section-heading hero__card-heading">Pet care</h4>
-                    <div class="hero__card--line"></div>
-                    <div class="hero__card--line"></div>
+
+                <div class="hero__list-item-saparate"></div>
+
+                <!-- hero list item 2 -->
+                <div class="hero__list-item">
+                  <img
+                    src="./assets/img/hero04.png"
+                    alt="Lucy-pet"
+                    class="hero__list-item-thumb hero__list-item-below"
+                  />
+                  <div class="hero__list-item--info">
+                    <p class="hero__list-item--title">Pet care</p>
+                    <div class="hero__list-item--skeleton" style="--percent: 100%"></div>
+                    <div class="hero__list-item--skeleton" style="--percent: 33%"></div>
                   </div>
                 </div>
               </div>
@@ -80,13 +134,34 @@
                 Discover a wide variety of Pawsitive services to choose from, including daycare,
                 private walks, office duty and spa.
               </p>
-              <div class="hero__content--link">
-                <a href="#!" class="btn hero-btn">Book a Meet</a>
-                <a href="#!" hero-link>Schedule a Call</a>
+              <div class="hero__row">
+                <a href="#!" class="btn hero-btn">
+                  Book a Meet
+                  <span class="btn__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="5"
+                      height="6"
+                      viewBox="0 0 5 6"
+                      fill="#fff"
+                    >
+                      <path
+                        d="M1.48584 0.5L3.98584 3L1.48584 5.5"
+                        stroke="#FD5056"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </a>
+                <a href="#!" class="hero-link">Schedule a Call</a>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <section>
+        <p>iiiiiiiiiiiiiiiiiiiiiiiiisdsfdsaadfsdsaf</p>
       </section>
     </main>
   </body>
