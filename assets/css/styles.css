@@ -532,12 +532,55 @@ button {
 }
 
 .about__img--wrap-bottom {
+  width: 458px;
   border-radius: 18px;
   border: 2px solid #fff;
   background: linear-gradient(180deg, #c6e2fa 0%, #94c2ea 100%);
   box-shadow: 0 17px 77px -8px rgba(190, 165, 139, 0.17);
 }
 .about__media--img--bottom {
-  width: 458px;
+  width: 100%;
   object-fit: cover;
+}
+
+.about__decor-img {
+  position: absolute;
+}
+
+.about__decor-img:nth-child(1) {
+  top: 13px;
+  right: 64px;
+}
+
+.about__decor-img:nth-child(2) {
+  top: -16px;
+  right: 13px;
+}
+
+.about__decor-img:nth-child(3) {
+  top: 33px;
+  right: -21px;
+}
+
+.about__decor-img:nth-child(4) {
+  top: 268px;
+  right: -33px;
+}
+
+.about__decor-img:nth-child(5) {
+  bottom: 150px;
+  right: 19px;
+}
+.about__decor-img:nth-child(6) {
+  right: -24px;
+  bottom: -40px;
+}
+.about__decor-img:nth-child(7) {
+  right: -33px;
+  bottom: -47px;
+}
+
+.about__decor-img:nth-child(8) {
+  bottom: -55px;
+  right: -42px;
 }
