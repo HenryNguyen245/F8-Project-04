@@ -1112,13 +1112,17 @@ button {
 }
 
 .review {
-  padding: 53px 0;
+  padding: 105px 0 52px;
 }
 
 .review__inner {
   display: flex;
   align-items: center;
   column-gap: 44px;
+}
+
+.review__list {
+  display: flex;
 }
 
 .review__control {
@@ -1134,6 +1138,9 @@ button {
   color: #ff5b2e;
 }
 
+.review__control:nth-of-type(2) {
+  margin-left: auto;
+}
 .review__control:hover {
   color: #fff;
   background-color: #ff5b2e;
@@ -1171,6 +1178,15 @@ button {
   display: block;
   border-radius: inherit;
   z-index: 1;
+}
+
+.review__content {
+  overflow: hidden;
+}
+.review__item {
+  margin-top: 28px;
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .review__item--quote {
